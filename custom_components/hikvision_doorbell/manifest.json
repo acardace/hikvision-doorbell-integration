@@ -6,6 +6,7 @@
   "documentation": "https://github.com/acardace/hikvision-doorbell-integration",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/acardace/hikvision-doorbell-integration/issues",
+  "after_dependencies": ["http"],
   "requirements": ["aiohttp>=3.8.0", "async-timeout>=4.0.0"],
   "version": "1.0.0"
 }
