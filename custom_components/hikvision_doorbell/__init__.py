@@ -9,6 +9,7 @@ from typing import Any
 
 import voluptuous as vol
 
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, Platform
 from homeassistant.core import HomeAssistant, ServiceCall
@@ -218,7 +219,7 @@ async def _register_lovelace_resource(hass: HomeAssistant) -> None:
         return
 
     # Register static path for the card
-    hass.http.register_static_path(card_url, card_path, cache_headers=True)
+    await hass.http.async_register_static_paths([StaticPathConfig(card_url, card_path, True)])
     _LOGGER.info("Registered Hikvision Doorbell card at %s", card_url)
 
     # Add to Lovelace resources if not already present
