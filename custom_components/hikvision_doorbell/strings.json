@@ -3,15 +3,21 @@
     "step": {
       "user": {
         "title": "Hikvision Doorbell Setup",
-        "description": "Configure your Hikvision Doorbell integration",
+        "description": "Configure your Hikvision Doorbell integration. The doorbell server is provided by the Hikvision Doorbell add-on.",
         "data": {
           "server_url": "Doorbell Server URL",
-          "rtsp_url": "RTSP Stream URL (optional)"
+          "frigate_url": "Frigate URL",
+          "camera_name": "Frigate Camera Name"
+        },
+        "data_description": {
+          "server_url": "URL of the Hikvision Doorbell server, e.g. http://localhost:8080",
+          "frigate_url": "URL of your Frigate instance, e.g. https://frigate.example.com",
+          "camera_name": "Name of the doorbell camera in Frigate, e.g. 'doorbell'. This is used to display the live video feed in the card."
         }
       }
     },
     "error": {
-      "cannot_connect": "Failed to connect to server. Please check the URL and ensure the server is running.",
+      "cannot_connect": "Failed to connect to the doorbell server. Please check the URL and ensure the Hikvision Doorbell add-on is running.",
       "unknown": "Unexpected error occurred"
     },
     "abort": {
