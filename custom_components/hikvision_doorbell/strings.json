@@ -10,8 +10,8 @@
           "camera_name": "Frigate Camera Name"
         },
         "data_description": {
-          "server_url": "URL of the Hikvision Doorbell server, e.g. http://localhost:8080",
-          "frigate_url": "URL of your Frigate instance, e.g. https://frigate.example.com",
+          "server_url": "URL of the Hikvision Doorbell server provided by the add-on",
+          "frigate_url": "Base URL of your Frigate instance",
           "camera_name": "Name of the doorbell camera in Frigate, e.g. 'doorbell'. This is used to display the live video feed in the card."
         }
       }
